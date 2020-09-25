@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+	<title>Naimul Hoque</title>
+	<meta charset="UTF-8">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i,700" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="../css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="../css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="../css/magnific-popup.css"/>
+	<link rel="stylesheet" href="../css/style.css"/>
+</head>
+<style>
+.mainBars rect{
+  shape-rendering: auto;
+  fill-opacity: 0;
+  stroke-width: 0.5px;
+  stroke: rgb(0, 0, 0);
+  stroke-opacity: 0;
+}
+.subBars{
+	shape-rendering:crispEdges;
+}
+.edges{
+	stroke:none;
+	fill-opacity:0.5;
+}
+</style>
+<body>
+	<div class="container-fluid">
+		<div class="row" style="margin-top: 50px;margin-left: 20px;">
+			<div class="col-lg-12">
+				<a href="../index.html"> Home</a>
+		    </div>
+		</div>
+		<div class="row" style="margin-top: 50px;margin-left: 20px;">
+			<div class="col-lg-8">
+				<h3>Plug and Play: Interactive Causal Models for Explainable and Transparent Algorithmic Decision Making</h3> (This work is currently under review in Fat* 2020 )
+				<p>Naimul Hoque, Klaus Mueller</p>
+				<p>Prior research in fair decision making  has opted for causal modeling for one simple reason- causal models can directly  infer the cause and effect relationships that exist between sensitive/protected variables and the target variable. This helps decision-making algorithms to conveniently detect and mitigate any unfair and  biased effect incurred by the protected variables. While these prior works try to mitigate unfairness by minimizing the effect of the protected variables on the decision made, the models themselves are still black boxes to the end-users. For example, an end-user still does not know why some predictive model granted him or her a loan or not, what attributes affected the decision, and how he or she differs from other applicants. That is to say, even though the system might be fair, it fails to convey a fair and transparent decision-making process to the end-user. We introduce visual causality analysis to facilitate a live decision-making platform where users can visualize how decisions were made and what factors affected the decision, all within an interactive environment. Investigative case studies on three real-life datasets demonstrate that our visual causality system can allow users to reach a more conclusive perception of the decision-making process and help them understand what is needed to be changed to achieve an alternative decision. 
+				</p>
+			</div>
+			<div id="main_figure" class="col-lg-4">
+				<img  src="../img/loan8.png"  >
+				<p><b>Figure</b>: Interactive Causal Network for House Loan Approval System</p>
+				
+			</div>
+		</div>
+		<div class="row" style="margin-top: 50px;margin-left: 20px;">
+			<div class="col-lg-4">
+				<img  src="../img/loan_declined.png"  >
+			</div>
+			<div class="col-lg-4">
+				<img  src="../img/loan_approved.png"  >
+			</div>
+			<div class="col-lg-8">
+			<p> <b>Figure</b>: Example Scenario on a Home loan Sanction dataset. A hypothetical female user is providing her information on our interactive platform.  (Left) The loan application was denied. (Right) The user plays with the tool and finds out that increasing the median household income of the neighbourhood will get him the loan. In other words, the user needs to move to a better neighbourhood to get her loan approved.</p>
+			</div>
+
+		</div>
+	</div>
+
+<script src="../js/jquery-2.1.4.min.js"></script>
+
+</body>
+</html>

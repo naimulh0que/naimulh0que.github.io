@@ -1,0 +1,231 @@
+<meta charset="utf-8">
+<head>
+	<title>Naimul Hoque</title>
+	<meta charset="UTF-8">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i,700" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="../css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="../css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="../css/magnific-popup.css"/>
+	<link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row" style="margin-top: 50px;margin-left: 20px;">
+			<div class="col-lg-12">
+				<a href="../index.html"> Home</a>
+		    </div>
+		</div>
+		<div class="row" style="margin-top: 50px;margin-left: 20px;">
+			
+			<!--<div class="col-lg-4" align="center">-->
+		 <!--     <div id="bar_chart"></div>-->
+		 <!--     <button class="cat_data">Listen</button>-->
+		 <!--   </div>-->
+		    <div class="col-lg-4" align="center">
+		      <div id="line_chart"></div>
+		      <button id="line_button">Listen</button>
+		      <button id="stop_button" style="display:none;">Stop</button>
+		    </div>
+		    
+		</div>
+		<div class="row" style="margin-top: 50px;margin-left: 20px;">
+		    <div class="col-lg-8">
+		    <p> <b>Click the Listen button to understand the pattern of the line chart. The audio is around one minute. </b>    </p> <p style="color:red"> Chrome browser, and headphones recommended. </p>
+
+		    <div class="col-lg-4" align="center">
+		      <div id="bar_chart"></div>
+		      <button id="bar_data">Listen</button>
+		      <button id="stop_button1" style="display:none;">Stop</button>
+		    </div>
+		    <br>
+		    <p> <b>Here is another example. This audio represents the above Bar Chart. The audio is binaural in nature. The value of a category is encoded as the length of that sound in the mix. </b> </p>
+		    
+		    <p>Inferring insights and understanding patterns that are otherwise hard to untangle is the primary reason behind employing data visualization. But, how to enable such data analysis that employs visualizations for people with visual impairments? One possible solution to make charts accessible is to use text readers to read the charts to the visually impaired. This solution is contradictory in terms of why the visualizations were employed in the first place. Understanding and inferring insights and patterns from such voice-based text readers are difficult even for people with no disability due to the inherent lack of short-term memory of the human's cognition system. We are exploring a new communication medium for making charts accessible by exploiting the human's intrinsic ability to distinguish natural sounds. We are motivated by the fact that visually impaired persons are generally good at understanding and identifying natural sounds, and thus, sonification techniques have great potential in this matter. In particular, we are interested in binaural sound environments where data would be converted to a mix of natural sounds.   </p>
+		    </div>
+		</div>
+	</div>
+	<script src="../js/jquery-2.1.4.min.js"></script>
+	<script src="https://d3js.org/d3.v4.js"></script>
+	<script src="../js/vizs.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pizzicato/0.6.4/Pizzicato.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.js"></script>
+
+	<script>
+		//sound names, right now supports four sounds
+		base_dir = "../sounds/" 
+		var sound_names = [base_dir+'ocean_waves.wav',base_dir+'cricket.wav',base_dir+'bird.wav',base_dir+'rain.wav']
+		freq = [80,130,440,880]
+		//pizzixato.js sounds
+		var audio = [];
+		for(i=0;i<sound_names.length;i++){
+		  audio.push( new Pizzicato.Sound(sound_names[i]));
+		}
+		var group;
+		group = new Pizzicato.Group(audio);
+		
+
+		var reverb = new Pizzicato.Effects.Reverb({
+		    time: 2,
+		    decay: 0.8,
+		    reverse: true,
+		    mix: 0.5
+		});
+		var stereoPanner = new Pizzicato.Effects.StereoPanner({pan: 0.5});
+
+		//howler.js sounds
+		var sound = [];
+		for(i=0;i<sound_names.length;i++){
+		  sound.push ( new Howl({src: [sound_names[i]]}));
+
+		}
+
+		//global variable
+		stats = {}
+		var durations = [];
+
+		//categorical data for pie and bar chart
+		var cat_data = [{"x":"bird","value":5},
+		        {"x":"thunder","value":20},
+		        {"x":"rain","value":35}],
+		    pie_data,
+		    line_data = [];
+
+		//call all the d3 functions
+		pie_chart()
+		bar_chart()
+		line_chart()
+		// multivariate()
+
+		///////////////////Pie and Bar Chart code starts here, the d3 code to draw the them is in vizs.js///////////////
+		/**
+		 * event listener for clicking on the bar or pie chart button
+		 */
+		 $(".cat_data").on("click", function(){
+		  
+		  min = d3.min(pie_data)
+		  max = d3.max(pie_data)
+		  console.log(min,max)
+
+		  for(i=1;i<pie_data.length;i++){
+		    d = pie_data[i]
+		    val = (+d - min)/(max-min)
+		    console.log(val)
+		    sound[i].volume(val+0.05)
+		    sound[i].play()
+		        
+		  }
+		  // for(i=0;i<audio.length;i++)
+		    
+		  
+		});
+
+
+		function play_sound(data){
+		  
+		  console.log(data)
+		  keys = d3.keys(data)
+		  attrs = keys.length
+		  for(i=0;i<attrs;i++){
+		    key = keys[i]
+		    min_max = stats[key]
+		    val = (+data[key] - min_max[0])/(min_max[1]-min_max[0])
+		    audio[i].volume = val+.05
+		    audio[i].frequency = freq[i%4]
+		        
+		  }
+		  group.addEffect(reverb)
+		  group.addEffect(stereoPanner)
+		  group.play();
+		  
+		}
+		///////////////////Line Chart code starts here, the d3 code to draw the line chart is in vizs.js///////////////
+		/**
+		 * function to find average of an data interval
+		 */
+		function find_average(start,end,data){
+		  sum = 0
+		  for(i=start;i<end;i++){
+		    sum += data[i]
+		  }
+		  return sum/(end-start)
+		}
+		/**
+		 * function to normalize line data
+		 */
+		function normalize(){
+		  max = Math.max.apply(Math, line_data)
+		  min = Math.min.apply(Math, line_data)
+		  console.log(min,max)
+		  normalized_data = []
+		  for(i=0;i<line_data.length;i++){
+		    normalized_data.push((line_data[i]-min)/(max-min))
+		  }
+		  return normalized_data
+
+		}
+
+		$("#bar_data").on("click",function(){
+			console.log("bar dta clicked")
+			var audio = new Audio('../sounds/bar.mp3');
+			audio.play();
+			// $("#stop_button1").show()
+		})
+
+		/**
+		 * event listener for clicking on line chart button
+		 */
+
+		$("#line_button").on("click",function(){
+		  var full_rain = new Pizzicato.Sound('../sounds/full_rain.wav', function(){
+		  $("#line_chart").show()
+		  $("#stop_button").show()
+		  console.log("clicked line chart button")
+		  //Normalize line data
+		  normalized_data = normalize()
+		  //divide the whole data in 20 divisions, probably best to 
+		  //have this as a parameter
+		  divisions = 20
+		  step = Math.floor(line_data.length/divisions)
+		  //find average for each divisions and set that as a audio volume
+		  start = 0
+		  end = start+step
+		  v = find_average(start,end,normalized_data)
+		  console.log(v)
+		  full_rain.volume = v
+		  full_rain.play()
+		  
+		  //recalculate every 3 seconds and update audio volume
+		  interval = (60/divisions)*1000
+		  var myVar = setInterval(myTimer, interval);
+		  
+		  function myTimer() {
+		    start += step
+		    end += step
+		    if(end > normalized_data.length)
+		      end = normalized_data.length
+		    
+		    v = find_average(start,end,normalized_data)
+		    full_rain.volume = v
+		  }
+		  
+		  //on sound end clear the timer
+		  full_rain.on('end', function() {
+		    clearInterval(myVar);
+		    $("#stop_button").hide();
+		  })
+		  $("#stop_button").on("click",function(){
+		      full_rain.stop()
+		      clearInterval(myVar);
+		      $("#stop_button").hide()
+		  })
+		  
+		  });
+
+		})
+
+	</script>
+</body>

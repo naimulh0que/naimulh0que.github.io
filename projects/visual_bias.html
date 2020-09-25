@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+	<title>Naimul Hoque</title>
+	<meta charset="UTF-8">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i,700" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="../css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="../css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="../css/magnific-popup.css"/>
+	<link rel="stylesheet" href="../css/style.css"/>
+</head>
+<style>
+.mainBars rect{
+  shape-rendering: auto;
+  fill-opacity: 0;
+  stroke-width: 0.5px;
+  stroke: rgb(0, 0, 0);
+  stroke-opacity: 0;
+}
+.subBars{
+	shape-rendering:crispEdges;
+}
+.edges{
+	stroke:none;
+	fill-opacity:0.5;
+}
+</style>
+<body>
+	<div class="container-fluid">
+		<div class="row" style="margin-top: 50px;margin-left: 20px;">
+			<div class="col-lg-12">
+				<a href="../index.html"> Home</a>
+		    </div>
+		</div>
+		<div class="row" style="margin-top: 50px;margin-left: 20px;">
+			
+			<div class="col-lg-8">
+				<h3>(un)BiasViz: An Interactive Tool for Balancing Visual Biases in Video Streams</h3> (Work in progress. )
+				<p>Naimul Hoque, Nazmus Saquib, Syed Masum Billah, Klaus Mueller</p>
+				<p>Visual media such as movies, TV shows, live streams pass on gender and skin-color biases through the portrayals of the characters appearing in the video content. 
+Researchers and human right organizations have long been voicing concerns over such biases in visual media. 
+As a result, media producers have become increasingly aware of these biases.
+However, they struggle to balance the distribution of gender and skin-color in visual media during the production cycle, as the production system they typically use lack support in this regard.
+In this paper, we propose (un)BiasViz, an interactive, visual tool that assists media producers to evaluate gender and skin-tone distribution in realtime.
+A user study with 20 participants shows 43\% reduction of the gender bias and 44\% reduction of skin-color bias while producing live streams from multiple camera-feeds---all of which are indicative of the promise and potential of (un)BiasViz in commercial production system.  
+				</p>
+			</div>
+			<div id="main_figure" class="col-lg-8">
+				<video width="800" controls>
+  					<source src="../videos/unbiasviz-video.mp4" type="video/mp4">
+  
+					  Your browser does not support HTML5 video.
+					</video>
+			</div>
+			<!-- <div id="main_figure" class="col-lg-8">
+				<img  src="../img/interface.png"  >
+				<p><b>Figure</b>: Components of (un)BiasViz: (a) a countdown timer showing when the charts and graphs will be updated next; (b) the output stream; (c) bar-charts and (d) a stream graph showing the cumulative distribution and the timeline distribution of visual biases (e.g., gender, skin-tone) in output stream until now; (e) input streams (e.g., cameras with different angles and views) along with two bar-charts each, one showing visual biases in that stream $10$ seconds in advance, and another showing how choosing that particular stream will affect the overall distribution of visual biases in (c) in the next $10$ seconds. </p>
+				
+			</div> -->
+			
+		</div>
+		
+	</div>
+
+<script src="../js/jquery-2.1.4.min.js"></script>
+
+</body>
+</html>

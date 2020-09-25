@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+	<title>Naimul Hoque</title>
+	<meta charset="UTF-8">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i,700" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="../css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="../css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="../css/magnific-popup.css"/>
+	<link rel="stylesheet" href="../css/style.css"/>
+</head>
+<style>
+.mainBars rect{
+  shape-rendering: auto;
+  fill-opacity: 0;
+  stroke-width: 0.5px;
+  stroke: rgb(0, 0, 0);
+  stroke-opacity: 0;
+}
+.subBars{
+	shape-rendering:crispEdges;
+}
+.edges{
+	stroke:none;
+	fill-opacity:0.5;
+}
+</style>
+<body>
+	<div class="container-fluid">
+		<div class="row" style="margin-top: 50px;margin-left: 20px;">
+			<div class="col-lg-12">
+				<a href="../index.html"> Home</a>
+		    </div>
+		</div>
+		<div class="row" style="margin-top: 50px;margin-left: 20px;">
+			<div class="col-lg-8">
+				<h3>TV Serial Watching Trends in Bangladesh</h3>
+				<p>Naimul Hoque, Ekram Hossain, Imran Bin Azad, Mehdi Rahman, Nazmus Saquib</p>
+				<p>SerialKhor, being one of the most prominent social groups in Bangladesh, with almost 27920 members till date, has emerged as a great platform where people share their opinions, important updates, reviews & recommendations on upcoming or on-going tv-series. 
+
+We took around 3000 group posts and tried to find some interesting facts by performing sentimental analysis on these data. The posts were labelled by sentiment labels such as anger, disgust, fear, joy and sadness by using the IBM Natural Language Processing toolkit. The posts were also grouped by the genres of the tv-series by extracting the tv-series names from the posts and passing them to the IMDB API.
+
+The most discussed serials belong to the category "Drama" followed by "Comedy" genre. A good number of posts were related to thriller, crime and romantic events in the serials. Among these, the posts related to thriller serials mostly expressed joy according to our sentimental analysis. On the other hand, we found opposite results when it came to history & drama. Both kind of posts seemed to be expressing sadness with a steering 75% and 68% respectively. 
+We have also found some 'not-so-satisfied" angry posts regarding documentaries and news. Notably, fear does not prevail when it comes to action type series.  
+</p>
+			</div>
+			<div id="bipartite" class="col-lg-4">
+				
+				
+			</div>
+		</div>
+	</div>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="http://vizjs.org/viz.v1.1.0.min.js"></script>
+<script src="../js/jquery-2.1.4.min.js"></script>
+<script>
+
+var data=[['Action','anger',0,0.0],
+['Action','disgust',0,0.0],
+['Action','fear',1,11.11111111111111],
+['Action','joy',3,33.33333333333333],
+['Action','sadness',5,55.55555555555556],
+['Adventure','anger',0,0.0],
+['Adventure','disgust',0,0.0],
+['Adventure','fear',0,0.0],
+['Adventure','joy',1,25.0],
+['Adventure','sadness',3,75.0],
+['Animation','anger',0,0.0],
+['Animation','disgust',0,0.0],
+['Animation','fear',0,0.0],
+['Animation','joy',1,100.0],
+['Animation','sadness',0,0.0],
+['Biography','anger',0,0.0],
+['Biography','disgust',0,0.0],
+['Biography','fear',0,0.0],
+['Biography','joy',1,33.33333333333333],
+['Biography','sadness',2,66.66666666666666],
+['Comedy','anger',0,0.0],
+['Comedy','disgust',0,0.0],
+['Comedy','fear',1,5.555555555555555],
+['Comedy','joy',9,50.0],
+['Comedy','sadness',8,44.44444444444444],
+['Crime','anger',0,0.0],
+['Crime','disgust',0,0.0],
+['Crime','fear',0,0.0],
+['Crime','joy',3,27.27272727272727],
+['Crime','sadness',8,72.72727272727273],
+['Documentary','anger',1,33.33333333333333],
+['Documentary','disgust',0,0.0],
+['Documentary','fear',0,0.0],
+['Documentary','joy',0,0.0],
+['Documentary','sadness',2,66.66666666666666],
+['Drama','anger',0,0.0],
+['Drama','disgust',0,0.0],
+['Drama','fear',0,0.0],
+['Drama','joy',10,32.25806451612903],
+['Drama','sadness',21,67.74193548387096],
+['Fantasy','anger',0,0.0],
+['Fantasy','disgust',0,0.0],
+['Fantasy','fear',1,25.0],
+['Fantasy','joy',0,0.0],
+['Fantasy','sadness',3,75.0],
+['History','anger',0,0.0],
+['History','disgust',0,0.0],
+['History','fear',0,0.0],
+['History','joy',1,25.0],
+['History','sadness',3,75.0],
+['Horror','anger',0,0.0],
+['Horror','disgust',0,0.0],
+['Horror','fear',0,0.0],
+['Horror','joy',0,0.0],
+['Horror','sadness',2,100.0],
+['Musical','anger',0,0.0],
+['Musical','disgust',0,0.0],
+['Musical','fear',0,0.0],
+['Musical','joy',0,0.0],
+['Musical','sadness',1,100.0],
+['Mystery','anger',0,0.0],
+['Mystery','disgust',0,0.0],
+['Mystery','fear',0,0.0],
+['Mystery','joy',1,25.0],
+['Mystery','sadness',3,75.0],
+['News','anger',1,100.0],
+['News','disgust',0,0.0],
+['News','fear',0,0.0],
+['News','joy',0,0.0],
+['News','sadness',0,0.0],
+['Reality-TV','anger',0,0.0],
+['Reality-TV','disgust',0,0.0],
+['Reality-TV','fear',0,0.0],
+['Reality-TV','joy',0,0.0],
+['Reality-TV','sadness',1,100.0],
+['Romance','anger',0,0.0],
+['Romance','disgust',0,0.0],
+['Romance','fear',0,0.0],
+['Romance','joy',4,50.0],
+['Romance','sadness',4,50.0],
+['Sci-Fi','anger',0,0.0],
+['Sci-Fi','disgust',0,0.0],
+['Sci-Fi','fear',0,0.0],
+['Sci-Fi','joy',2,66.66666666666666],
+['Sci-Fi','sadness',1,33.33333333333333],
+['Short','anger',0,0.0],
+['Short','disgust',0,0.0],
+['Short','fear',0,0.0],
+['Short','joy',1,100.0],
+['Short','sadness',0,0.0],
+['Sport','anger',0,0.0],
+['Sport','disgust',0,0.0],
+['Sport','fear',0,0.0],
+['Sport','joy',0,0.0],
+['Sport','sadness',2,100.0],
+['Talk-Show','anger',0,0.0],
+['Talk-Show','disgust',0,0.0],
+['Talk-Show','fear',0,0.0],
+['Talk-Show','joy',0,0.0],
+['Talk-Show','sadness',1,100.0],
+['Thriller','anger',0,0.0],
+['Thriller','disgust',0,0.0],
+['Thriller','fear',0,0.0],
+['Thriller','joy',5,71.42857142857143],
+['Thriller','sadness',2,28.57142857142857],
+
+];
+var color ={Action:"#3366CC", Thriller:"#DC3912",  Romance:"#FF9900" , Comedy: "#F11199", Drama: "#959b1d", Crime: "#DD3211", History: "#1d9b5a", Mystery: "#91531d"};
+var svg = d3.select("#bipartite").append("svg").attr("width", 600).attr("height", 500);
+var g = svg.append("g").attr("transform","translate(130,0)");
+
+var bp=viz.bP()
+		.data(data)
+		.min(12)
+		.pad(1)
+		.height(500)
+		.width(300)
+		.barSize(35)
+		.fill(d=>color[d.primary]);
+			
+g.call(bp);
+
+g.selectAll(".mainBars")
+	.on("mouseover",mouseover)
+	.on("mouseout",mouseout)
+
+g.selectAll(".mainBars").append("text").attr("class","label")
+	.attr("x",d=>(d.part=="primary"? -30: 30))
+	.attr("y",d=>+6)
+	.text(d=>d.key)
+	.attr("text-anchor",d=>(d.part=="primary"? "end": "start"))
+	.style('font-size','12px');
+	
+g.selectAll(".mainBars").append("text").attr("class","perc")
+	.attr("x",d=>(d.part=="primary"? -110: 80))
+	.attr("y",d=>+6)
+	.text(function(d){ return d3.format("0.0%")(d.percent)})
+	.attr("text-anchor",d=>(d.part=="primary"? "end": "start"))
+	.style('font-size','12px');;
+
+function mouseover(d){
+	bp.mouseover(d);
+	g.selectAll(".mainBars")
+	.select(".perc")
+	.text(function(d){ return d3.format("0.0%")(d.percent)})
+}
+function mouseout(d){
+	bp.mouseout(d);
+	g.selectAll(".mainBars")
+		.select(".perc")
+	.text(function(d){ return d3.format("0.0%")(d.percent)})
+}
+// d3.select(self.frameElement).style("height", "800px");
+$("#bipartite").append("<p>Figure: Interactive bipartite graph depicting sentiments related to different genres of tv-series</p>")
+</script>
+</body>
+</html>
