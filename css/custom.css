@@ -6,7 +6,7 @@ html,body{
 
 	/*font-weight: 600;*/
 }
-.container-fluid,.row,.col-lg-4,.col-lg-8{
+.container-fluid,.full-length{
   height: 100vh !important;
   /*overflow-y: : hidden;*/
   /*max-height: 100%*/
