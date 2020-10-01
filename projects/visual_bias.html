@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="../css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="../css/font-awesome.min.css"/>
 	<link rel="stylesheet" href="../css/magnific-popup.css"/>
-	<link rel="stylesheet" href="../css/style.css"/>
+	<link rel="stylesheet" href="../css/custom.css"/>
 </head>
 <style>
 .mainBars rect{
@@ -38,23 +38,39 @@
 		</div>
 		<div class="row" style="margin-top: 50px;margin-left: 20px;">
 			
-			<div class="col-lg-8">
-				<h3>(un)BiasViz: An Interactive Tool for Balancing Visual Biases in Video Streams</h3> (Work in progress. )
-				<p>Naimul Hoque, Nazmus Saquib, Syed Masum Billah, Klaus Mueller</p>
-				<p>Visual media such as movies, TV shows, live streams pass on gender and skin-color biases through the portrayals of the characters appearing in the video content. 
-Researchers and human right organizations have long been voicing concerns over such biases in visual media. 
-As a result, media producers have become increasingly aware of these biases.
-However, they struggle to balance the distribution of gender and skin-color in visual media during the production cycle, as the production system they typically use lack support in this regard.
-In this paper, we propose (un)BiasViz, an interactive, visual tool that assists media producers to evaluate gender and skin-tone distribution in realtime.
-A user study with 20 participants shows 43\% reduction of the gender bias and 44\% reduction of skin-color bias while producing live streams from multiple camera-feeds---all of which are indicative of the promise and potential of (un)BiasViz in commercial production system.  
+			<div class="col-lg-8" style="text-align: justify;">
+				<h3>Toward Interactively Balancing the Screen Time of Actors Based on Observable Phenotypic Traits in Live Telecast</h3>
+				<p>Naimul Hoque, Nazmus Saquib, Syed Masum Billah, Klaus Mueller. CSCW 2020. 
+					<a href="../docs/Screen-Balancer.pdf">Paper</a>
+				</p>
+				<p>Several prominent studies have shown that the imbalanced on-screen exposure of observable phenotypic
+traits like gender and skin-tone in movies, TV shows, live telecasts, and other visual media can reinforce
+gender and racial stereotypes in society. Researchers and human rights organizations alike have long been
+calling to make media producers more aware of such stereotypes. While awareness among media producers is
+growing, balancing the presence of different phenotypes in a video requires substantial manual effort and can
+typically only be done in the post-production phase. The task becomes even more challenging in the case of a
+live telecast where video producers must make instantaneous decisions with no post-production phase to
+refine or revert a decision. In this paper, we propose Screen-Balancer, an interactive tool that assists media
+producers in balancing the presence of different phenotypes in a live telecast.
+The design of Screen-Balancer is informed by a field study conducted in a professional live studio. Screen-
+Balancer analyzes the facial features of the actors to determine phenotypic traits using facial detection
+packages; it then facilitates real-time visual feedback for interactive moderation of gender and skin-tone
+distributions. To demonstrate the effectiveness of our approach, we conducted a user study with 20 participants
+and asked them to compose live telecasts from a set of video streams simulating different camera angles, and
+featuring several male and female actors with different skin-tones. The study revealed that the participants
+were able to reduce the difference of screen times of male and female actors by 43%, and that of light-skinned
+and dark-skinned actors by 44%, thus showing the promise and potential of using such a tool in commercial
+production systems. 
 				</p>
 			</div>
 			<div id="main_figure" class="col-lg-8">
-				<video width="800" controls>
-  					<source src="../videos/unbiasviz-video.mp4" type="video/mp4">
+				
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/4LuZvaeaB4o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<!-- <video width="800" controls>
+  					<source src="../videos/ss_reduced.mp4" type="video/mp4">
   
 					  Your browser does not support HTML5 video.
-					</video>
+				</video> -->
 			</div>
 			<!-- <div id="main_figure" class="col-lg-8">
 				<img  src="../img/interface.png"  >

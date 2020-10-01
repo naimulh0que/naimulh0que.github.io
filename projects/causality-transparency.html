@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="../css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="../css/font-awesome.min.css"/>
 	<link rel="stylesheet" href="../css/magnific-popup.css"/>
-	<link rel="stylesheet" href="../css/style.css"/>
+	<link rel="stylesheet" href="../css/custom.css"/>
 </head>
 <style>
 .mainBars rect{
@@ -38,26 +38,19 @@
 		</div>
 		<div class="row" style="margin-top: 50px;margin-left: 20px;">
 			<div class="col-lg-8">
-				<h3>Plug and Play: Interactive Causal Models for Explainable and Transparent Algorithmic Decision Making</h3> (This work is currently under review in Fat* 2020 )
+				<h3>Outcome-Explorer: A Causality Guided Interactive Visual Interface for Interpretable Algorithmic Decision Making</h3> (This work is currently under review in CHI 2021)
 				<p>Naimul Hoque, Klaus Mueller</p>
-				<p>Prior research in fair decision making  has opted for causal modeling for one simple reason- causal models can directly  infer the cause and effect relationships that exist between sensitive/protected variables and the target variable. This helps decision-making algorithms to conveniently detect and mitigate any unfair and  biased effect incurred by the protected variables. While these prior works try to mitigate unfairness by minimizing the effect of the protected variables on the decision made, the models themselves are still black boxes to the end-users. For example, an end-user still does not know why some predictive model granted him or her a loan or not, what attributes affected the decision, and how he or she differs from other applicants. That is to say, even though the system might be fair, it fails to convey a fair and transparent decision-making process to the end-user. We introduce visual causality analysis to facilitate a live decision-making platform where users can visualize how decisions were made and what factors affected the decision, all within an interactive environment. Investigative case studies on three real-life datasets demonstrate that our visual causality system can allow users to reach a more conclusive perception of the decision-making process and help them understand what is needed to be changed to achieve an alternative decision. 
+				<p>The widespread adoption of algorithmic decision-making systems has brought about the necessity to interpret the reasoning behind these decisions. The majority of these systems are complex black box models, and auxiliary models are often used to approximate and then explain their behavior. However, recent research suggests that such explanations are not overly accessible to non-expert users and can lead to incorrect interpretation of the underlying model. In this paper, we show that a predictive and interactive model based on causality is inherently interpretable, does not require any auxiliary model, and allows both expert and non-expert users to understand the model comprehensively. To demonstrate our method we developed Outcome Explorer, a causality guided interactive interface, and evaluated it by conducting think-aloud sessions with three expert users and a user study with 18 non-expert users. All three expert users found our tool to be comprehensive in supporting their explanation needs while the non-expert users were able to understand the inner workings of the model easily. 
 				</p>
 			</div>
-			<div id="main_figure" class="col-lg-4">
-				<img  src="../img/loan8.png"  >
-				<p><b>Figure</b>: Interactive Causal Network for House Loan Approval System</p>
-				
-			</div>
+			
 		</div>
 		<div class="row" style="margin-top: 50px;margin-left: 20px;">
-			<div class="col-lg-4">
-				<img  src="../img/loan_declined.png"  >
-			</div>
-			<div class="col-lg-4">
-				<img  src="../img/loan_approved.png"  >
-			</div>
+		
 			<div class="col-lg-8">
-			<p> <b>Figure</b>: Example Scenario on a Home loan Sanction dataset. A hypothetical female user is providing her information on our interactive platform.  (Left) The loan application was denied. (Right) The user plays with the tool and finds out that increasing the median household income of the neighbourhood will get him the loan. In other words, the user needs to move to a better neighbourhood to get her loan approved.</p>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/oWnnexfiA1k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<!-- <img src="../img/outcome-explorer.png" width="1000">
+				<p> <b>Figure</b>: Model Interpretation Module of Outcome-Explorer. A) Interactive causal DAG showing causal relations between variables. Each node includes two circular knobs (green and orange) to facilitate profile comparisons. The edge thickness and color depict the effect size and type of each edge. B) Sample selection panel. C) A biplot showing the position of green and orange profiles compared to nearest neighbors. D) A line chart to track the model outcome and to go back and forth between feature configuration. E) Realism meter allowing users to determine how common a profile is compared to other samples in the dataset.</p> -->
 			</div>
 
 		</div>
