@@ -11,3 +11,8 @@ html,body{
   /*overflow-y: : hidden;*/
   /*max-height: 100%*/
 }
+.col-lg-6{
+	text-align: justify;
+}
+
+
