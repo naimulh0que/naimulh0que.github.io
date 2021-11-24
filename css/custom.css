@@ -21,6 +21,15 @@ html,body{
 	font: 20px lato, sans-serif;
 }
 
+.styled_text {
+	font-family: 'Tangerine', serif;
+    font-size: 48px;
+}
+
+.text_body {
+	font-family: 'Inconsolata', monospace;
+}
+
 .heading {
     border-bottom: 5px solid #2196F3!important;
     /* margin-bottom: 10px; */
