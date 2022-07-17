@@ -24,10 +24,12 @@ html,body{
 .styled_text {
 	font-family: 'Georgia', sans-serif;
     font-size: 28px;
+	margin-top: 10px;
 }
 
 .text_body {
 	font-family: 'Inconsolata', monospace;
+	margin-bottom: 2px;
 }
 
 .heading {
@@ -47,4 +49,12 @@ img.project_image {
 	height: 120px;
 	object-fit: cover;
 	border: 1px solid #2196F3 !important;
+}
+img.dp_image {
+	float: left;
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	border: 1px solid #2196F3 !important;
+	margin: 10px;
 }
