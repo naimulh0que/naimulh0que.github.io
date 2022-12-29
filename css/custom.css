@@ -44,7 +44,7 @@ p.large {
 	margin-bottom: 0.2rem;
 }
 img.project_image {
-	float: left;
+	/* float: left; */
 	width: 220px;
 	height: 120px;
 	object-fit: cover;
