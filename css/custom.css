@@ -23,8 +23,11 @@ html,body{
 
 .styled_text {
 	font-family: 'Georgia', sans-serif;
-    font-size: 28px;
-	margin-top: 10px;
+    font-size: 22px;
+}
+.styled_subheader {
+	font-family: 'Georgia', sans-serif;
+    font-size: 18px;
 }
 
 .text_body {
