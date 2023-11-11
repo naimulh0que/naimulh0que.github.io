@@ -13,6 +13,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
 
 	<!-- Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css"/>
 	<link rel="stylesheet" href="css/magnific-popup.css"/>
@@ -37,10 +38,10 @@
 	    </li> -->
 	  <!-- </ul>
 	</nav> -->
-	<div class="ui container">
-		<div class="row" style="text-align: center;">
-			<div class="col-lg-3" ></div>
-			<div class="col-lg-6" >
+	<div class="container">
+		<div class="row">
+			<!-- <div class="col-lg-3" ></div> -->
+			<div class="col-3" >
 				<svg style="width:100%;" height="220">
 				  <defs>
 				    <pattern id="image" x="0%" y="0%" height="100%" width="100%"
@@ -61,24 +62,37 @@
 					
 				</div>
 			</div>
-			<div class="col-lg-3" ></div>
-		</div>
-		<div class="row" style="text-align: center;">
-			<div class="col-lg-3" ></div>
-			<div class="col-lg-6" >
+			<div class="col-9" >
+				<!-- <a class="nav-link" href="index.html">Home</a>
+				<a class="nav-link" href="index.html">Publication</a> -->
 				<hr>
 				<div id="home_div" class="text_body" style="margin-left: 5px;margin-right: 5px;text-align: justify;">
-					<p>I am a third-year Ph.D. student at the College of Information Studies (iSchool), University of Maryland, College Park.
+					<p>I am a fourth-year Ph.D. student at the College of Information Studies (iSchool), University of Maryland, College Park.
 						I work with 
 						<a href="https://sites.umiacs.umd.edu/elm/">Professor Niklas Elmqvist</a> and 
 						am a member of the <a href="https://hcil.umd.edu">Human-Computer Interaction Lab</a>. 
-						I study how interactive systems can help people use AI reliably and get benefitted in the process. 
+						Previously, I obtained a Master's in Computer Science from Stony Brook University
+						and a BSc in Computer Science from the University of Dhaka, Bangladesh. 
+						You can call me Naimul (pronunciation: na-ei-mul).
+					</p>
+					<p>
+						My research interest is  <b> designing interactive visualization for AI-infused supertools</b>.
+						I approach this interest in two ways. First,
+						I design interactive visualization techniques that can adapt to large-scale data and models.
+						For example, during my dissertation, I designed <a href="https://browse.arxiv.org/pdf/2308.02764.pdf">Aggregate Query Sculpting (AQS)</a> for iteratively exploring large-scale multivariate data
+						 and <a href="./docs/vcp.pdf">Visual Concept Programming</a> for summarizing and programming image datasets.
+						I then investigate how the visualization techniques can work as a communication medium between humans and AI for designing supertools, 
+						systems that amplify, augment, empower, and enhance human performance, by combining user experiences with AI support.
+						For instance, I designed a series of AI-assisted writing tools (<a href="./docs/dramatVis.pdf">DramatVis Personae</a> and <a href="./docs/dis23-42.pdf">Portrayal</a>) that combine visualization and NLP to support complex creative writing tasks.
+						These tools demonstrate how to amplify human creativity with AI while retaining human agency. Please see my publication list below for more details.
+					</p>
+						<!-- I study how interactive systems can help people use AI reliably and get benefitted in the process. 
 						This typically results in novel interactive systems, data visualization, and data sonification techniques for promoting creativity, learning, and sensemaking.
 						I obtained a Master's in Computer Science from Stony Brook University
 						where I worked and still collaborate with <a href="https://www3.cs.stonybrook.edu/~mueller/"> Professor Klaus Mueller</a>. I also collaborate with
 						<a href="https://ist.psu.edu/directory/skb5969">Professor Syed Billah (Penn State)</a> regularly.
 						I obtained a BSc in Computer Science from the University of Dhaka, Bangladesh. 
-						You can call me Naimul (pronunciation: na-ei-mul).
+						You can call me Naimul (pronunciation: na-ei-mul). -->
 						<!-- I have designed data representations
 						for <a href="./docs/Outcome_Explorer_final_manuscript.pdf"> general population (VIS'22)</a>, 
 						<a href="./docs/vcp.pdf">machine Learning developers (VIS'22)</a>, 
@@ -86,11 +100,230 @@
 						<a href="./docs/dramatVis.pdf">creative writers (DIS'22)</a>, and 
 						<a href="./docs/Screen-Balancer.pdf">live telecast producers (CSCW'21)</a>. -->
 					</p>
-					<p>
-						
-					</p>
+					<p class="styled_text">Recent News</p>
+					<ul class="text_body" style="list-style-type:none;text-align: left; padding-left: 0;font-size: 18px;">
+						<li>Nov 2023: Paper led by <a href="https://www.linkedin.com/in/shahreen-salim-15a783131/">Shahreen</a> is accepted at ACM CSCW 2024! Details coming soon.</li>
+						<li>July 2023: One paper accepted at IEEE VIS 2023!</li>
+						<li>July 2023: Attended DIS at Pittsburg and visited the <a href="https://dig.cmu.edu">CMU DIG lab</a></li>
+						<li>May 2023: <a href="https://www.gicentre.net/news/naimulhoque-may2023">Invited talk</a> at giCentre, City, University of London</li>
+						<li>April 2023: Wohoo! Our paper on modeling and visualizing fictional characters is conditionally accepted at DIS2023</li>
+						<li>April 2023: Attended CHI2023 at beautiful Hamburg</li>
+						<li>March 2023: Invied talk at DGP Lab, University of Toronto</li>
+						<li>March 2023: I will be attending In2Writing workshop at CHI 2023</li>
+						<li>Jan 2023: One paper accepted at ACM CHI 2023!</li>
+						<!-- <li>July 2022: One paper accepted at IEEE VIS 2022!</li> -->
+						<!-- <li>May 2022: One paper accepted at ACM DIS 2022!</li> -->
+						<!-- <li>Feb, 2021: Submitted a paper to DIS 2021 </li>
+						<li>Feb, 2021: Paper accepted at CHI LBW 2021 </li>
+						<li>Feb, 2021: I will attend FAccT 2021 Doctoral Consortium </li>
+						<li>Sept, 2020: Submitted a paper to CHI 2021</li>
+						<li>Aug, 2020: Moved to UMD</li>
+						<li>July, 2020: Paper accepted at CSCW 2020!</li> -->
+					</ul>
+					</br>
+					<p class="styled_text">Publications</p>
+					<div class="ui fluid card" style="margin-bottom: 20px;">
+						<div class="content ui grid">
+							<div class="col-lg-6">
+								<img class="ui medium image" src="img/dataopsy.png">
+							</div>
+							<div class="col-lg-6">
+								<p class="large">Dataopsy: Scalable and Fluid Visual Exploration using Aggregate Query Sculpting</p>
+								<p class="small"><i>IEEE Transaction on Visualization and Computer Graphics, 2023 (IEEE VIS 2023)</i></p>
+								<p class="small"><b>Md Naimul Hoque, </b> Niklas Elmqvist</p>
+								<p class="small"> 
+									<a href="https://browse.arxiv.org/pdf/2308.02764.pdf">PDF</a> |
+									<a href="http://dataopsy.herokuapp.com/book/adult_full/index/count">Demo</a> |
+									<a href="https://github.com/tonmoycsedu/Dataopsy">Github</a>
+								</p>
+								<!-- <div class="ui small blue label">Creativity Support</div>
+								<div class="ui brown small label">Human in the Loop Machine Learning</div>
+								<div class="ui small label">IEEE VIS 23</div> -->
+							</div>
+						</div>
+					</div>
+					<div class="ui fluid card" style="margin-bottom: 20px;">
+						<div class="content ui grid">
+							<div class="col-lg-6">
+								<img class="ui medium image" src="img/portrayal.png">
+							</div>
+							<div class="col-lg-6">
+								<p class="large">Portrayal: Leveraging NLP and Visualization for Analyzing Fictional Characters</p>
+								<p class="small"><i>Designing Interactive Systems, DIS 2023</i></p>
+								<p class="small"><b>Md Naimul Hoque</b>, Bhavya Ghai, Kari Kraus, Niklas Elmqvist</p>
+								<p class="small"> 
+									<a href="./docs/dis23-42.pdf">PDF</a> |
+									<a href="https://character-traits.herokuapp.com/home">Try it out!</a>
+								</p>
+								<!-- <div class="ui large blue label">Creativity Support</div>
+								<div class="ui large label">DIS 23</div> -->
+							</div>
+						</div>
+					</div>
+					<div class="ui fluid card" style="margin-bottom: 20px;">
+						<div class="content ui grid">
+							<div class="col-lg-6">
+								<img class="ui medium image" src="img/In2Writing.png">
+							</div>
+							<div class="col-lg-6">
+								<p class="large">Augmenting Human-AI Co-Writing with Interactive Visualization</p>
+								<p class="small"><i>In2Writing Workshop, CHI 2023</i></p>
+								<p class="small"><b>Md Naimul Hoque</b>, Niklas Elmqvist</p>
+								<p class="small"> 
+									<a href="./docs/In2Writing2023.pdf">PDF</a>
+								</p>
+								<!-- <div class="ui large blue label">Creativity Support</div>
+								<div class="ui large label">In2Writing@CHI 23</div> -->
+							</div>
+						</div>
+					</div>
+					<div class="ui fluid card" style="margin-bottom: 20px;">
+						<div class="content ui grid">
+							<div class="col-lg-6">
+						<!-- <iframe width="300" height="155" src="https://www.youtube.com/embed/ot4h2cXFhe8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+								<img class="ui medium image" src="img/susurrus.png">
+							</div>
+							<div class="col-lg-6">
+								<p class="large">Susurrus: Accessible Data Representation with Natural Sound</p>
+								<p class="small"><i>ACM Conference on Human Factors in Computing Systems (CHI 2023)</i></p>
+								<p class="small"><b>Md Naimul Hoque</b>, Md Ehtesham-Ul-Haque, Niklas Elmqvist, Syed Billah</p>
+								<!-- <p>Details coming soon!</p>-->
+								<p class="small"> 
+									<a href="./docs/chi23-404.pdf">PDF</a>
+									<!-- <a href="https://www.youtube.com/watch?v=kCL_dTSmvpE">Video</a> |
+									<a href="https://github.com/tonmoycsedu/DramatVis-Personae">Github</a> |
+									<a href="http://130.245.128.219:3000/demo/a_kiss_of_ice/">Try it out!</a> -->
+								</p>
+								<!-- <div class="ui large teal label">Accessible Data Representation</div>
+								<div class="ui large label">ACM CHI 23</div> -->
+							</div>
+						</div>
+					</div>
+					<div class="ui fluid card" style="margin-bottom: 20px;">
+						<div class="content ui grid">
+							<div class="col-lg-6">
+						<!-- <iframe width="300" height="155" src="https://www.youtube.com/embed/ot4h2cXFhe8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+								<img class="ui medium image" src="img/vcp.png">
+							</div>
+							<div class="col-lg-6">
+								<p class="large">Visual Concept Programming:
+								Injecting Human Intelligence at Scale</p>
+								<p class="small"><i> IEEE Transaction on Visualization and Computer Graphics (IEEE VIS 2022)</i></p>
+								<p class="small"><b>Md Naimul Hoque</b>, Wenbin He, Shekar Arvind Kumar, Liang Gou, Liu Ren </p>
+								<!-- <p>Details coming soon!</p>-->
+								<p class="small"> 
+									<a href="./docs/vcp.pdf">PDF</a>
+									<!-- <a href="https://www.youtube.com/watch?v=kCL_dTSmvpE">Video</a> |
+									<a href="https://github.com/tonmoycsedu/DramatVis-Personae">Github</a> |
+									<a href="http://130.245.128.219:3000/demo/a_kiss_of_ice/">Try it out!</a> -->
+									<!-- <div class="ui brown large label">Human in the Loop Machine Learning</div>
+									<div class="ui large label">IEEE VIS 22</div> -->
+								</p>
+							</div>
+						</div>
+					</div>
+	
+					<div class="ui fluid card" style="margin-bottom: 20px;">
+						<div class="content ui grid">
+							<div class="col-lg-6">
+								<!-- <iframe width="300" height="155" src="https://www.youtube.com/embed/ot4h2cXFhe8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+								<img class="ui medium image" src="img/outcome-explorer.png">
+							</div>
+							<div class="col-lg-6">
+								<p class="large">Outcome-Explorer: Interactive Causal Model for Interpretable Decision Making</p>
+								<p class="small"><i>IEEE Transaction on Visualization and Computer Graphics (IEEE VIS 2022)</i></p>
+								<p class="small"><b>Md Naimul Hoque</b>, Klaus Mueller</p>
+								<p class="small"><a href="./docs/Outcome_Explorer_final_manuscript.pdf"> PDF</a> | 
+									<a href="https://www.youtube.com/watch?v=ot4h2cXFhe8"> Video</a>
+								</p>
+								<!-- <div class="ui brown large label">Human in the Loop Machine Learning</div>
+								<div class="ui large label">IEEE VIS 22</div> -->
+							</div>
+						</div>	
+					</div>
+	
+					<div class="ui fluid card" style="margin-bottom: 20px;">
+						<div class="content ui grid">
+							<!-- <iframe width="300" height="155" src="https://www.youtube.com/embed/ot4h2cXFhe8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+							<div class="col-lg-6">
+								<img class="ui medium image" src="img/dramatvis_teaser.png" >
+							</div>
+							<div class="col-lg-6">
+								<p class="description">DramatVis Personae: Identifying Social Biases in Creative Writing</p>
+								<p class="small"><i> Designing Interactive Systems (DIS), 2022</i></p>
+								<p class="small"><b>Md Naimul Hoque</b>, Bhavya Ghai, Niklas Elmqvist</p>
+								<p class="small">
+									<a href="./docs/dramatVis.pdf">PDF</a> |
+									<a href="https://www.youtube.com/watch?v=kCL_dTSmvpE">Video</a> |
+									<a href="https://github.com/tonmoycsedu/DramatVis-Personae">Github</a> |
+									<a href="http://130.245.128.219:3000/demo/a_kiss_of_ice/">Try it out!</a>
+								</p>
+								<!-- <div class="ui large blue label">Creativity Support</div>
+								<div class="ui large label">ACM DIS 22</div> -->
+							</div>
+						</div>
+					</div>
+					<div class="ui fluid card" style="margin-bottom: 20px;">
+						<div class="content ui grid">
+							<div class="col-lg-6">
+							<!-- <iframe width="400" height="255" src="https://www.youtube.com/embed/LcwlyU3QT0w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+								<img class="ui medium image" src="img/wordbias.png" >
+							</div>
+							<div class="col-lg-6">
+								<p class="large">Intersectional Bias in Word Embeddings</p>
+								<p class="small"><i>Extended Abstracts of the CHI Conference on Human Factors in Computing, 2021</i></p>
+								<p class="small">Bhavya Ghai, <b>Md Naimul Hoque</b>,  Klaus Mueller </p>
+								<p class="small"><a href="https://arxiv.org/pdf/2103.03598.pdf"> PDF</a> | 
+									<a href="https://www.youtube.com/watch?v=LcwlyU3QT0w"> Video</a> |
+									<a href="https://github.com/bhavyaghai/WordBias"> Github</a> |
+									<a href="http://130.245.128.219:6999/"> Try it out!</a>
+								</p>
+								<!-- <div class="ui brown large label">Human in the Loop Machine Learning</div>
+								<div class="ui large label">ACM CHI EA 21</div> -->
+							</div>	
+						</div>
+					</div>
+					<div class="ui fluid card"  style="margin-bottom: 20px;">
+						<div class="content ui grid">
+							<div class="col-lg-6">
+							<!-- <iframe width="400" height="255" src="https://www.youtube.com/embed/4LuZvaeaB4o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+								<img class="ui medium image" src="img/screen-balancer.png" alt="img/screen-balancer.png" >
+							</div>
+							<div class="col-lg-6">
+								<p class="large">Balancing Gender and Skin-tone Presence in Live Telecast</p>
+								<p class="small"><i>Proceedings of the ACM on Human-Computer Interaction (CSCW), 2020</i></p>
+								<p class="small"><b>Md Naimul Hoque</b>, Nazmus Saquib, Syed Masum Billah, and Klaus Mueller</p>
+								<p class="small"><a href="./docs/Screen-Balancer.pdf">PDF</a> | 
+									<a href="https://www.youtube.com/watch?v=4LuZvaeaB4o"> Video</a>
+								</p>
+								<!-- <div class="ui large blue label">Creativity Support</div>
+								<div class="ui large label">ACM CSCW 20</div> -->
+							</div>
+						</div>	
+					</div>
+					<div class="ui fluid card" style="margin-bottom: 20px;">
+						<div class="content ui grid">
+							<div class="col-lg-6">
+							<!-- <iframe width="400" height="255" src="https://www.youtube.com/embed/4LuZvaeaB4o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+								<img class="ui medium image" src="img/gender.png" alt="img/gender.png" >
+							</div>
+							<div class="col-lg-6">
+								<p class="description">Evaluating Gender Portrayal in Bangladeshi TV.</p>
+								<p class="small"><i>Workshop on Machine Learning for the Developing World. NIPS 2017</i></p>
+								<p class="small"><b>Md Naimul Hoque</b>, Rawshan E. Fatima, Manash Mandal, Nazmus Saquib</p>
+								<p class="small"><a href="https://arxiv.org/pdf/1711.09728.pdf"> PDF </a></p>
+								<!-- <div class="ui large blue label">Creativity Support</div>
+								<div class="ui large label">ML4D</div> -->
+							</div>
+						</div>	
+					</div>	
 				</div>
 			</div>
+			<!-- <div class="col-lg-9" ></div> -->
+		</div>
+		<div class="row" style="text-align: center;">
+			<div class="col-lg-3" ></div>
+			
 			<!-- <div class="col-lg-6">
 				<hr>
 				<div class="text_body" style="text-align: center;">
@@ -107,228 +340,13 @@
 			<div class="col-lg-3" ></div>
 			<div class="col-lg-6" style="margin-top: 20px;">
 				
-				<p class="styled_text">Recent News</p>
-				<ul class="text_body" style="list-style-type:none;text-align: left; padding-left: 0;font-size: 18px;">
-					<li>July 2023: One paper accepted at IEEE VIS 2023! Details coming soon.</li>
-					<li>July 2023: Attended DIS at Pittsburg and visited the <a href="https://dig.cmu.edu">CMU DIG lab</a></li>
-					<li>May 2023: <a href="https://www.gicentre.net/news/naimulhoque-may2023">Invited talk</a> at giCentre, City, University of London</li>
-					<li>April 2023: Wohoo! Our paper on modeling and visualizing fictional characters is conditionally accepted at DIS2023</li>
-					<li>April 2023: Attended CHI2023 at beautiful Hamburg</li>
-					<li>March 2023: Invied talk at DGP Lab, University of Toronto</li>
-					<li>March 2023: I will be attending In2Writing workshop at CHI 2023</li>
-					<li>Jan 2023: One paper accepted at ACM CHI 2023!</li>
-					<li>July 2022: One paper accepted at IEEE VIS 2022!</li>
-					<li>May 2022: One paper accepted at ACM DIS 2022!</li>
-					<!-- <li>Feb, 2021: Submitted a paper to DIS 2021 </li>
-					<li>Feb, 2021: Paper accepted at CHI LBW 2021 </li>
-					<li>Feb, 2021: I will attend FAccT 2021 Doctoral Consortium </li>
-					<li>Sept, 2020: Submitted a paper to CHI 2021</li>
-					<li>Aug, 2020: Moved to UMD</li>
-					<li>July, 2020: Paper accepted at CSCW 2020!</li> -->
-				</ul>
+				
 				
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-lg-3" ></div>
-			<div class="col-lg-6" style="margin-top: 20px;">
-				<p class="styled_text">Publications</p>
-				<div class="ui fluid card" style="margin-bottom: 20px;">
-					<div class="content ui grid">
-						<div class="col-lg-6">
-							<img class="ui medium image" src="img/dataopsy.png">
-						</div>
-						<div class="col-lg-6">
-							<p class="large">Dataopsy: Scalable and Fluid Visual Exploration using Aggregate Query Sculpting</p>
-							<p class="small"><i>IEEE Transaction on Visualization and Computer Graphics, 2023 (to appear)</i></p>
-							<p class="small"><b>Md Naimul Hoque, </b> Niklas Elmqvist</p>
-							<p class="small"> 
-								<a href="https://browse.arxiv.org/pdf/2308.02764.pdf">PDF</a> |
-								<a href="http://dataopsy.herokuapp.com/book/adult_full/index/count">Demo</a> |
-								<a href="https://github.com/tonmoycsedu/Dataopsy">Github</a>
-							</p>
-							<div class="ui large blue label">Creativity Support</div>
-							<div class="ui brown large label">Human in the Loop Machine Learning</div>
-							<div class="ui large label">IEEE VIS 23</div>
-						</div>
-					</div>
-				</div>
-				<div class="ui fluid card" style="margin-bottom: 20px;">
-					<div class="content ui grid">
-						<div class="col-lg-6">
-							<img class="ui medium image" src="img/portrayal.png">
-						</div>
-						<div class="col-lg-6">
-							<p class="large">Portrayal: Leveraging NLP and Visualization for Analyzing Fictional Characters</p>
-							<p class="small"><i>Designing Interactive Systems, DIS 2023</i></p>
-							<p class="small"><b>Md Naimul Hoque</b>, Bhavya Ghai, Kari Kraus, Niklas Elmqvist</p>
-							<p class="small"> 
-								<a href="./docs/dis23-42.pdf">PDF</a> |
-								<a href="https://character-traits.herokuapp.com/home">Try it out!</a>
-							</p>
-							<div class="ui large blue label">Creativity Support</div>
-							<div class="ui large label">DIS 23</div>
-						</div>
-					</div>
-				</div>
-				<div class="ui fluid card" style="margin-bottom: 20px;">
-					<div class="content ui grid">
-						<div class="col-lg-6">
-							<img class="ui medium image" src="img/In2Writing.png">
-						</div>
-						<div class="col-lg-6">
-							<p class="large">Augmenting Human-AI Co-Writing with Interactive Visualization</p>
-							<p class="small"><i>In2Writing Workshop, CHI 2023</i></p>
-							<p class="small"><b>Md Naimul Hoque</b>, Niklas Elmqvist</p>
-							<p class="small"> 
-								<a href="./docs/In2Writing2023.pdf">PDF</a>
-							</p>
-							<div class="ui large blue label">Creativity Support</div>
-							<div class="ui large label">In2Writing@CHI 23</div>
-						</div>
-					</div>
-				</div>
-				<div class="ui fluid card" style="margin-bottom: 20px;">
-					<div class="content ui grid">
-						<div class="col-lg-6">
-					<!-- <iframe width="300" height="155" src="https://www.youtube.com/embed/ot4h2cXFhe8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-							<img class="ui medium image" src="img/susurrus.png">
-						</div>
-						<div class="col-lg-6">
-							<p class="large">Susurrus: Accessible Data Representation with Natural Sound</p>
-							<p class="small"><i>ACM Conference on Human Factors in Computing Systems (CHI)</i></p>
-							<p class="small"><b>Md Naimul Hoque</b>, Md Ehtesham-Ul-Haque, Niklas Elmqvist, Syed Billah</p>
-							<!-- <p>Details coming soon!</p>-->
-							<p class="small"> 
-								<a href="./docs/chi23-404.pdf">PDF</a>
-								<!-- <a href="https://www.youtube.com/watch?v=kCL_dTSmvpE">Video</a> |
-								<a href="https://github.com/tonmoycsedu/DramatVis-Personae">Github</a> |
-								<a href="http://130.245.128.219:3000/demo/a_kiss_of_ice/">Try it out!</a> -->
-							</p>
-							<div class="ui large teal label">Accessible Data Representation</div>
-							<div class="ui large label">ACM CHI 23</div>
-						</div>
-					</div>
-				</div>
-				<div class="ui fluid card" style="margin-bottom: 20px;">
-					<div class="content ui grid">
-						<div class="col-lg-6">
-					<!-- <iframe width="300" height="155" src="https://www.youtube.com/embed/ot4h2cXFhe8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-							<img class="ui medium image" src="img/vcp.png">
-						</div>
-						<div class="col-lg-6">
-							<p class="large">Visual Concept Programming:
-							Injecting Human Intelligence at Scale</p>
-							<p class="small"><i> IEEE Transaction on Visualization and Computer Graphics</i></p>
-							<p class="small"><b>Md Naimul Hoque</b>, Wenbin He, Shekar Arvind Kumar, Liang Gou, Liu Ren </p>
-							<!-- <p>Details coming soon!</p>-->
-							<p class="small"> 
-								<a href="./docs/vcp.pdf">PDF</a>
-								<!-- <a href="https://www.youtube.com/watch?v=kCL_dTSmvpE">Video</a> |
-								<a href="https://github.com/tonmoycsedu/DramatVis-Personae">Github</a> |
-								<a href="http://130.245.128.219:3000/demo/a_kiss_of_ice/">Try it out!</a> -->
-								<div class="ui brown large label">Human in the Loop Machine Learning</div>
-								<div class="ui large label">IEEE VIS 22</div>
-							</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="ui fluid card" style="margin-bottom: 20px;">
-					<div class="content ui grid">
-						<div class="col-lg-6">
-							<!-- <iframe width="300" height="155" src="https://www.youtube.com/embed/ot4h2cXFhe8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-							<img class="ui medium image" src="img/outcome-explorer.png">
-						</div>
-						<div>
-							<p class="large">Interactive Causal Model for Interpretable Decision Making</p>
-							<p class="small"><i>IEEE Transaction on Visualization and Computer Graphics</i></p>
-							<p class="small"><b>Md Naimul Hoque</b>, Klaus Mueller</p>
-							<p class="small"><a href="./docs/Outcome_Explorer_final_manuscript.pdf"> PDF</a> | 
-								<a href="https://www.youtube.com/watch?v=ot4h2cXFhe8"> Video</a>
-							</p>
-							<div class="ui brown large label">Human in the Loop Machine Learning</div>
-							<div class="ui large label">IEEE VIS 22</div>
-						</div>
-					</div>	
-				</div>
-
-				<div class="ui fluid card" style="margin-bottom: 20px;">
-					<div class="content ui grid">
-						<!-- <iframe width="300" height="155" src="https://www.youtube.com/embed/ot4h2cXFhe8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-						<div class="col-lg-6">
-							<img class="ui medium image" src="img/dramatvis_teaser.png" >
-						</div>
-						<div class="col-lg-6">
-							<p class="description">DramatVis Personae: Identifying Social Biases in Creative Writing</p>
-							<p class="small"><i> Designing Interactive Systems (DIS), 2022</i></p>
-							<p class="small"><b>Md Naimul Hoque</b>, Bhavya Ghai, Niklas Elmqvist</p>
-							<p class="small">
-								<a href="./docs/dramatVis.pdf">PDF</a> |
-								<a href="https://www.youtube.com/watch?v=kCL_dTSmvpE">Video</a> |
-								<a href="https://github.com/tonmoycsedu/DramatVis-Personae">Github</a> |
-								<a href="http://130.245.128.219:3000/demo/a_kiss_of_ice/">Try it out!</a>
-							</p>
-							<div class="ui large blue label">Creativity Support</div>
-							<div class="ui large label">ACM DIS 22</div>
-						</div>
-					</div>
-				</div>
-				<div class="ui fluid card" style="margin-bottom: 20px;">
-					<div class="content ui grid">
-						<div class="col-lg-6">
-						<!-- <iframe width="400" height="255" src="https://www.youtube.com/embed/LcwlyU3QT0w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-							<img class="ui medium image" src="img/wordbias.png" >
-						</div>
-						<div class="col-lg-6">
-							<p class="large">Intersectional Bias in Word Embeddings</p>
-							<p class="small"><i>Extended Abstracts of the CHI Conference on Human Factors in Computing, 2021</i></p>
-							<p class="small">Bhavya Ghai, <b>Md Naimul Hoque</b>,  Klaus Mueller </p>
-							<p class="small"><a href="https://arxiv.org/pdf/2103.03598.pdf"> PDF</a> | 
-								<a href="https://www.youtube.com/watch?v=LcwlyU3QT0w"> Video</a> |
-								<a href="https://github.com/bhavyaghai/WordBias"> Github</a> |
-								<a href="http://130.245.128.219:6999/"> Try it out!</a>
-							</p>
-							<div class="ui brown large label">Human in the Loop Machine Learning</div>
-							<div class="ui large label">ACM CHI EA 21</div>
-						</div>	
-					</div>
-				</div>
-				<div class="ui fluid card"  style="margin-bottom: 20px;">
-					<div class="content ui grid">
-						<div class="col-lg-6">
-						<!-- <iframe width="400" height="255" src="https://www.youtube.com/embed/4LuZvaeaB4o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-							<img class="ui medium image" src="img/screen-balancer.png" alt="img/screen-balancer.png" >
-						</div>
-						<div class="col-lg-6">
-							<p class="large">Balancing Gender and Skin-tone Presence in Live Telecast</p>
-							<p class="small"><i>Proceedings of the ACM on Human-Computer Interaction (CSCW), 2020</i></p>
-							<p class="small"><b>Md Naimul Hoque</b>, Nazmus Saquib, Syed Masum Billah, and Klaus Mueller</p>
-							<p class="small"><a href="./docs/Screen-Balancer.pdf">PDF</a> | 
-								<a href="https://www.youtube.com/watch?v=4LuZvaeaB4o"> Video</a>
-							</p>
-							<div class="ui large blue label">Creativity Support</div>
-							<div class="ui large label">ACM CSCW 20</div>
-						</div>
-					</div>	
-				</div>
-				<div class="ui fluid card" style="margin-bottom: 20px;">
-					<div class="content ui grid">
-						<div class="col-lg-6">
-						<!-- <iframe width="400" height="255" src="https://www.youtube.com/embed/4LuZvaeaB4o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-							<img class="ui medium image" src="img/gender.png" alt="img/gender.png" >
-						</div>
-						<div class="col-lg-6">
-							<p class="description">Evaluating Gender Portrayal in Bangladeshi TV.</p>
-							<p class="small"><i>Workshop on Machine Learning for the Developing World. NIPS 2017</i></p>
-							<p class="small"><b>Md Naimul Hoque</b>, Rawshan E. Fatima, Manash Mandal, Nazmus Saquib</p>
-							<p class="small"><a href="https://arxiv.org/pdf/1711.09728.pdf"> PDF </a></p>
-							<div class="ui large blue label">Creativity Support</div>
-							<div class="ui large label">ML4D</div>
-						</div>
-					</div>	
-				</div>
-			</div>	
+			
 		</div>	
 		<hr>	
 	</div>
