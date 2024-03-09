@@ -31,8 +31,9 @@ html,body{
 }
 
 .text_body {
-	font-family: 'Inconsolata', monospace;
+	font-family: "Lato";
 	margin-bottom: 2px;
+	font-size: 22px;
 }
 
 .heading {
